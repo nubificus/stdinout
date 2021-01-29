@@ -6,8 +6,8 @@ fileread.so:
 	ar rcs libfileread.a fileread.o
 
 test:
-	gcc -Wall test.c -o test -lfileread -L. -I/usr/local/include
-	gcc -Wall test.c -o test_static -static -lfileread -L. -L/usr/local/lib -lvaccel
+	gcc -Wall test.c -o test -lfileread -L. -I${PWD}/vaccelrt/src -L${PWD}/vaccelrt/build/src -lvaccel -ldl
+	#gcc -Wall test.c -o test_static -static -lfileread -L. -L${PWD}/vaccelrt/build/src -lvaccel -I${PWD}/vaccelrt/src
 
 clean:
 	rm -rf *.o *.so *.a test test_static
