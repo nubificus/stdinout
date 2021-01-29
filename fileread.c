@@ -15,7 +15,7 @@ int fileread(char**ptr, ssize_t *len)
 		p = realloc(p, size);
 		memcpy(p+(size - ret), buf, ret);
 	}
-	write(STDOUT_FILENO, p, size);
+	//write(STDOUT_FILENO, p, size);
 	*ptr = p;
 	*len = size;
 
