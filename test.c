@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 #include <vaccel.h>
-#include <vaccel_ops.h>
 
 int fileread(char **ptr, ssize_t * len);
 int main(int argc, char **argv)
